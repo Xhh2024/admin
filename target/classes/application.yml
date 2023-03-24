@@ -1,0 +1,28 @@
+# 端口号
+server:
+  port: 8083
+
+spring:
+  # 配置数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/back_system?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 13579Xh.
+    # 配置第三方数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置MyBatis-plus
+mybatis-plus:
+  configuration:
+    # SQL日志打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 开启驼峰模式
+    map-underscore-to-camel-case: true
+  # xml文件存储地址
+  mapper-locations: classpath:mapper/*.xml
+  # 配置pojo类对应的数据库表
+  type-aliases-package: com.example.master.model.entiy
+
+
+
