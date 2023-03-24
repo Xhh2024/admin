@@ -18,6 +18,7 @@ public class UserController {
     @RequestMapping("login")
     public JsonData login(){
         log.info("hot-fix");
+        log.info("测试成功");
         return JsonData.buildSuccess();
     }
 }
